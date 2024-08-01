@@ -1,0 +1,9 @@
+[submodule "CascLib"]
+	path = CascLib
+	url = https://github.com/Marlamin/CascLib.git
+[submodule "Warcraft.NET"]
+	path = Warcraft.NET
+	url = https://github.com/Luzifix/Warcraft.NET.git
+[submodule "DBCD"]
+	path = DBCD
+	url = https://github.com/wowdev/DBCD
