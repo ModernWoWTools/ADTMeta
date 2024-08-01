@@ -11,12 +11,18 @@ namespace ADTMeta.Steps
         private const string META_FOLDER_TEXTURE = "Texture";
         private const string META_FOLDER_GROUND_EFFECT = "GroundEffect";
 
+        private const string META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_ID = "TextureInfoByTextureFileID.json";
+        private const string META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_PATH = "TextureInfoByTextureFilePath.json";
+        private const string META_FILE_GROUND_EFFECT_BY_TEXTURE_FILE_ID = "GroundEffectByTextureFileID.json";
+        private const string META_FILE_GROUND_EFFECT_BY_TEXTURE_FILE_PATH = "GroundEffectByTextureFilePath.json";
+
         private static ConcurrentDictionary<int, TextureInfo> _textureInfoMap = new ConcurrentDictionary<int, TextureInfo>();
         private static ConcurrentDictionary<int, List<uint>> _textureGroundEffectMap = new ConcurrentDictionary<int, List<uint>>();
 
         public static void Generate()
         {
             Console.WriteLine("[INFO] Generating texture meta");
+            Load();
 
             Parallel.ForEach(ListFile.NameMap.Where(l => l.Value.StartsWith("world/maps/kultiras/kultiras") && l.Value.EndsWith("_tex0.adt")), entry =>
             {
@@ -214,6 +220,31 @@ namespace ADTMeta.Steps
 
             _textureGroundEffectMap = new(_textureGroundEffectMap.Where(x => x.Value.Count > 0).ToDictionary());
         }
+        
+        private static void Load()
+        {
+            try
+            {
+                string textureMetaFile = Path.Combine(AppSettings.Instance.MetaFolder, META_FOLDER_TEXTURE, META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_ID);
+                if (File.Exists(textureMetaFile))
+                    _textureInfoMap = new ConcurrentDictionary<int, TextureInfo>(JsonConvert.DeserializeObject<Dictionary<int, TextureInfo>>(File.ReadAllText(textureMetaFile)));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR] Failed to load texture meta: {ex.Message}");
+            }
+
+            try
+            {
+                string groundEffectMetaFile = Path.Combine(AppSettings.Instance.MetaFolder, META_FOLDER_GROUND_EFFECT, META_FILE_GROUND_EFFECT_BY_TEXTURE_FILE_ID);
+                if (File.Exists(groundEffectMetaFile))
+                    _textureGroundEffectMap = new ConcurrentDictionary<int, List<uint>>(JsonConvert.DeserializeObject<Dictionary<int, List<uint>>>(File.ReadAllText(groundEffectMetaFile)));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR] Failed to load ground effect meta: {ex.Message}");
+            }
+        }
 
         private static void Save()
         {
@@ -221,23 +252,23 @@ namespace ADTMeta.Steps
             if (!Directory.Exists(textureMetaPath))
                 Directory.CreateDirectory(textureMetaPath);
 
-            SaveTextureInfoByFileID(Path.Combine(textureMetaPath, "TextureInfoByFileID.json"));
-            SaveTextureInfoByFilePath(Path.Combine(textureMetaPath, "TextureInfoByFilePath.json"));
+            SaveTextureInfoByTextureFileID(Path.Combine(textureMetaPath, META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_ID));
+            SaveTextureInfoByTextureFilePath(Path.Combine(textureMetaPath, META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_PATH));
 
             var groundEffectMetaPath = Path.Combine(AppSettings.Instance.MetaFolder, META_FOLDER_GROUND_EFFECT);
             if (!Directory.Exists(groundEffectMetaPath))
                 Directory.CreateDirectory(groundEffectMetaPath);
 
-            SaveGroundEffectIDsByTextureFileID(Path.Combine(groundEffectMetaPath, "GroundEffectIDsByTextureFileID.json"));
-            SaveGroundEffectIDsByTextureFilePath(Path.Combine(groundEffectMetaPath, "GroundEffectIDsByTextureFilePath.json"));
+            SaveGroundEffecByTextureFileID(Path.Combine(groundEffectMetaPath, META_FILE_GROUND_EFFECT_BY_TEXTURE_FILE_ID));
+            SaveGroundEffectByTextureFilePath(Path.Combine(groundEffectMetaPath, META_FILE_GROUND_EFFECT_BY_TEXTURE_FILE_PATH));
         }
 
-        private static void SaveTextureInfoByFileID(string path)
+        private static void SaveTextureInfoByTextureFileID(string path)
         {
             File.WriteAllText(path, JsonConvert.SerializeObject(_textureInfoMap.OrderBy(x => x.Key).ToDictionary(x => x.Key.ToString(), x => x.Value), Formatting.Indented));
         }
 
-        public static void SaveTextureInfoByFilePath(string path)
+        public static void SaveTextureInfoByTextureFilePath(string path)
         {
             var textureInfoByFilePath = new Dictionary<string, TextureInfo>();
             foreach (var entry in _textureInfoMap)
@@ -249,12 +280,12 @@ namespace ADTMeta.Steps
             File.WriteAllText(path, JsonConvert.SerializeObject(textureInfoByFilePath.OrderBy(x => x.Key).ToDictionary(), Formatting.Indented));
         }
 
-        public static void SaveGroundEffectIDsByTextureFileID(string path)
+        public static void SaveGroundEffecByTextureFileID(string path)
         {
             File.WriteAllText(path, JsonConvert.SerializeObject(_textureGroundEffectMap.OrderBy(x => x.Key).ToDictionary(x => x.Key.ToString(), x => x.Value), Formatting.Indented));
         }
 
-        public static void SaveGroundEffectIDsByTextureFilePath(string path)
+        public static void SaveGroundEffectByTextureFilePath(string path)
         {
             var groundEffectIDsByFilePath = new Dictionary<string, List<uint>>();
             foreach (var entry in _textureGroundEffectMap)

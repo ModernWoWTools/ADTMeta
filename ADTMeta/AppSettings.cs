@@ -8,9 +8,9 @@ namespace ADTMeta
     {
         private const string CONFIG_FILE = "ADTMeta.json";
 
-        private static string _configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "Config");
+        private static string _configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config");
 
-        private static string _cachePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "Cache");
+        private static string _cachePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Cache");
 
         // Product key i.e. wow
         public string Region { private set; get; } = "eu";

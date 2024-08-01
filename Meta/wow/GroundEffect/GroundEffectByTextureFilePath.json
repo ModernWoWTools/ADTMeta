@@ -31,18 +31,18 @@
     145331
   ],
   "tileset/expansion06/araknashal/7an_vrykulbones01_256.blp": [
-    150204,
     136384,
+    150204,
     139881
   ],
   "tileset/expansion06/azerite/7xp_azerite_pebble01_256.blp": [
-    149168,
-    152867
+    152867,
+    149168
   ],
   "tileset/expansion06/azerite/7xp_azerite_rock01_1024.blp": [
-    149169,
     152866,
-    150974
+    150974,
+    149169
   ],
   "tileset/expansion06/azsuna/7az_coral01_512.blp": [
     140909,
@@ -64,8 +64,8 @@
     139889
   ],
   "tileset/expansion07/barbarianzone/8dru_forestdirt01_1024.blp": [
-    145222,
-    145239
+    145239,
+    145222
   ],
   "tileset/expansion07/barbarianzone/8dru_forestfloor02_1024.blp": [
     144397,
@@ -79,16 +79,16 @@
     148974
   ],
   "tileset/expansion07/barbarianzone/8dru_grass03_1024.blp": [
+    150768,
     160403,
     157051,
-    150768,
-    157244,
+    150769,
     157245,
-    150769
+    157244
   ],
   "tileset/expansion07/barbarianzone/8dru_redmulch01_512.blp": [
-    149163,
     140559,
+    149163,
     148456
   ],
   "tileset/expansion07/barbarianzone/8dru_snowwall01_1024.blp": [
@@ -114,25 +114,25 @@
   ],
   "tileset/expansion07/kultiraszone/8kul_cobble_512.blp": [
     143921,
-    146028,
     144028,
-    155737
+    155737,
+    146028
   ],
   "tileset/expansion07/kultiraszone/8kul_dirt01_512.blp": [
-    136177,
-    143530,
     136183,
-    141265,
+    143530,
     139888,
-    155734
+    155734,
+    141265,
+    136177
   ],
   "tileset/expansion07/kultiraszone/8kul_dirt02_1024.blp": [
     152554,
-    152816,
     151666,
+    152816,
+    151681,
     157066,
-    157243,
-    151681
+    157243
   ],
   "tileset/expansion07/kultiraszone/8kul_gnomejunkpile01_1024.blp": [
     160405,
@@ -160,25 +160,25 @@
   ],
   "tileset/expansion07/kultiraszone/8kul_lichen01_512.blp": [
     160402,
-    145273,
     137725,
-    146029,
+    145273,
+    141279,
     155733,
-    141279
+    146029
   ],
   "tileset/expansion07/kultiraszone/8kul_lichen02_512.blp": [
     137838
   ],
   "tileset/expansion07/kultiraszone/8kul_moss01_256.blp": [
-    140912,
     136200,
-    136331,
+    140912,
     155732,
-    141680
+    141680,
+    136331
   ],
   "tileset/expansion07/kultiraszone/8kul_mossyrock01_1024.blp": [
-    150203,
     146538,
+    150203,
     148479
   ],
   "tileset/expansion07/kultiraszone/8kul_pebble01_256.blp": [
@@ -204,18 +204,18 @@
     141954,
     160391,
     137207,
-    139877,
     136184,
-    157067,
+    139877,
     141262,
+    157067,
     140300
   ],
   "tileset/expansion07/kultiraszone/8kul_rubble02_512.blp": [
     153527
   ],
   "tileset/expansion07/kultiraszone/8kul_sawdust01.blp": [
-    156878,
-    157184
+    157184,
+    156878
   ],
   "tileset/expansion07/kultiraszone/8kul_snow01_512.blp": [
     137734,
@@ -243,8 +243,8 @@
   ],
   "tileset/expansion07/riverzone/8riv_dirt03_512.blp": [
     143497,
-    150818,
-    145986
+    145986,
+    150818
   ],
   "tileset/expansion07/riverzone/8riv_farmsprouts_256.blp": [
     149662
