@@ -1,0 +1,58 @@
+name: Generate Meta files
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-meta:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        persist-credentials: false
+        fetch-depth: 0
+
+    - name: Restore cache
+      id: adt-meta-cache-restore
+      uses: actions/cache/restore@v4
+      with:
+        path: build/Cache
+        key: adt-meta-cache
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.x.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet publish --no-restore -o build --framework net8.0
+
+    - name: Generate Meta data
+      run: dotnet build/ADTMeta.dll wow ${{ github.workspace }}/Meta
+
+    - name: Delete previous cache
+      if: ${{ steps.adt-meta-cache-restore.outputs.cache-hit }} 
+      continue-on-error: true
+      run: |
+        gh extension install actions/gh-actions-cache
+        gh actions-cache delete "adt-meta-cache" --confirm
+      env:
+        GH_TOKEN: ${{ secrets.ACTION_TOKEN }}
+
+    - name: Save cache
+      id: adt-meta-cache-save
+      uses: actions/cache/save@v4
+      with:
+        path: build/Cache
+        key: adt-meta-cache
+
+    - name: Commit & Push changes
+      uses: actions-js/push@master
+      with:
+        author_name: ADT Meta
+        message: Update ADT Meta
+        branch: ${{ github.head_ref || github.ref_name }} 
+        github_token: ${{ secrets.ACTION_TOKEN }}
