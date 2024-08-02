@@ -6,6 +6,8 @@ Automatically dumps Texture and GroundEffect metadata from World of Warcraft ADT
 #### Texture
 - [Texture info by texture file id](Meta/wow/Texture/TextureInfoByTextureFileID.json)
 - [Texture info by texture file path](Meta/wow/Texture/TextureInfoByTextureFilePath.json)
+- [Texture material by texture file id](Meta/wow/Texture/TextureMaterialByTextureFileID.json)
+- [Texture material by texture file path](Meta/wow/Texture/TextureMaterialByTextureFilePath.json)
 
 #### GroundEffects
 - [GroundEffects by texture file id](Meta/wow/GroundEffect/GroundEffectByTextureFileID.json)
@@ -13,4 +15,3 @@ Automatically dumps Texture and GroundEffect metadata from World of Warcraft ADT
 
 ## Usage
 Arguments: `ADTMeta.exe <product> (metaFolder)`  
-

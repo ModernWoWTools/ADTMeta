@@ -13,11 +13,14 @@ namespace ADTMeta.Steps
 
         private const string META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_ID = "TextureInfoByTextureFileID.json";
         private const string META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_PATH = "TextureInfoByTextureFilePath.json";
+        private const string META_FILE_TEXTURE_MATERIAL_BY_TEXTURE_FILE_ID = "TextureMaterialByTextureFileID.json";
+        private const string META_FILE_TEXTURE_MATERIAL_BY_TEXTURE_FILE_PATH = "TextureMaterialByTextureFilePath.json";
         private const string META_FILE_GROUND_EFFECT_BY_TEXTURE_FILE_ID = "GroundEffectByTextureFileID.json";
         private const string META_FILE_GROUND_EFFECT_BY_TEXTURE_FILE_PATH = "GroundEffectByTextureFilePath.json";
 
         private static ConcurrentDictionary<int, TextureInfo> _textureInfoMap = new ConcurrentDictionary<int, TextureInfo>();
         private static ConcurrentDictionary<int, List<uint>> _textureGroundEffectMap = new ConcurrentDictionary<int, List<uint>>();
+        private static ConcurrentDictionary<int, byte> _textureMaterialMap = new ConcurrentDictionary<int, byte>();
 
         public static void Generate()
         {
@@ -43,6 +46,7 @@ namespace ADTMeta.Steps
 
                         TerrainTexture terrainTexture = new TerrainTexture(memoryStream.ToArray());
                         CollectTextureParameters(terrainTexture);
+                        CollectTextureMaterial(terrainTexture);
                         CollectGroundEffects(terrainTexture);
                     }
                 }
@@ -74,7 +78,6 @@ namespace ADTMeta.Steps
 
                 if (_textureInfoMap.TryGetValue((int)terrainTexture.TextureHeightIds.Textures[i], out var existingInfo))
                 {
-
                     if (existingInfo.Scale != mtxp.TextureScale || existingInfo.HeightScale != mtxp.HeightScale || existingInfo.HeightOffset != mtxp.HeightOffset)
                     {
                         // Check if the old values were defaults, if so don't bother 
@@ -96,6 +99,46 @@ namespace ADTMeta.Steps
                     HeightScale = mtxp.HeightScale,
                     HeightOffset = mtxp.HeightOffset
                 };
+            }
+        }
+
+        private static void CollectTextureMaterial(TerrainTexture terrainTexture)
+        {
+            if (terrainTexture.Chunks == null)
+                return;
+
+            foreach (var chunk in terrainTexture.Chunks)
+            {
+                if (chunk.TerrainMaterials == null || chunk.TerrainMaterials.TerrainMaterialIds == null || terrainTexture.TextureHeightIds == null || terrainTexture.TextureHeightIds.Textures == null)
+                    continue;
+
+                for (byte i = 0; i < chunk.TerrainMaterials.TerrainMaterialIds.Length; i++)
+                {
+                    if (chunk.TerrainMaterials.TerrainMaterialIds[i] == 0)
+                        continue;
+
+                    if (terrainTexture.TextureDiffuseIds.Textures[i] == 0)
+                        continue;
+
+                    if (_textureMaterialMap.TryGetValue((int)terrainTexture.TextureDiffuseIds.Textures[i], out var existingInfo))
+                    {
+                        if (existingInfo != chunk.TerrainMaterials.TerrainMaterialIds[i])
+                        {
+                            // Check if the old values were defaults, if so don't bother 
+                            if (existingInfo == 0)
+                                continue;
+
+                            if (AppSettings.Instance.Verbose)
+                            {
+                                Console.WriteLine("[DEBUG] Texture " + terrainTexture.TextureDiffuseIds.Textures[i] + " has conflicting material");
+                                Console.WriteLine("\t Existing: " + existingInfo);
+                                Console.WriteLine("\t New: " + chunk.TerrainMaterials.TerrainMaterialIds[i]);
+                            }
+                        }
+                    }
+
+                    _textureMaterialMap[(int)terrainTexture.TextureDiffuseIds.Textures[i]] = chunk.TerrainMaterials.TerrainMaterialIds[i];
+                }
             }
         }
 
@@ -220,25 +263,36 @@ namespace ADTMeta.Steps
 
             _textureGroundEffectMap = new(_textureGroundEffectMap.Where(x => x.Value.Count > 0).ToDictionary());
         }
-        
+
         private static void Load()
         {
             try
             {
-                string textureMetaFile = Path.Combine(AppSettings.Instance.MetaFolder, META_FOLDER_TEXTURE, META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_ID);
-                if (File.Exists(textureMetaFile))
-                    _textureInfoMap = new ConcurrentDictionary<int, TextureInfo>(JsonConvert.DeserializeObject<Dictionary<int, TextureInfo>>(File.ReadAllText(textureMetaFile)));
+                string textureInfoMetaFile = Path.Combine(AppSettings.Instance.MetaFolder, META_FOLDER_TEXTURE, META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_ID);
+                if (File.Exists(textureInfoMetaFile))
+                    _textureInfoMap = JsonConvert.DeserializeObject<ConcurrentDictionary<int, TextureInfo>>(File.ReadAllText(textureInfoMetaFile));
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[ERROR] Failed to load texture meta: {ex.Message}");
+                Console.WriteLine($"[ERROR] Failed to load texture info meta: {ex.Message}");
+            }
+
+            try
+            {
+                string textureMaterialMetaFile = Path.Combine(AppSettings.Instance.MetaFolder, META_FOLDER_TEXTURE, META_FILE_TEXTURE_MATERIAL_BY_TEXTURE_FILE_ID);
+                if (File.Exists(textureMaterialMetaFile))
+                    _textureMaterialMap = JsonConvert.DeserializeObject<ConcurrentDictionary<int, byte>>(File.ReadAllText(textureMaterialMetaFile));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR] Failed to load texture material meta: {ex.Message}");
             }
 
             try
             {
                 string groundEffectMetaFile = Path.Combine(AppSettings.Instance.MetaFolder, META_FOLDER_GROUND_EFFECT, META_FILE_GROUND_EFFECT_BY_TEXTURE_FILE_ID);
                 if (File.Exists(groundEffectMetaFile))
-                    _textureGroundEffectMap = new ConcurrentDictionary<int, List<uint>>(JsonConvert.DeserializeObject<Dictionary<int, List<uint>>>(File.ReadAllText(groundEffectMetaFile)));
+                    _textureGroundEffectMap = JsonConvert.DeserializeObject<ConcurrentDictionary<int, List<uint>>>(File.ReadAllText(groundEffectMetaFile));
             }
             catch (Exception ex)
             {
@@ -254,6 +308,8 @@ namespace ADTMeta.Steps
 
             SaveTextureInfoByTextureFileID(Path.Combine(textureMetaPath, META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_ID));
             SaveTextureInfoByTextureFilePath(Path.Combine(textureMetaPath, META_FILE_TEXTURE_INFO_BY_TEXTURE_FILE_PATH));
+            SaveTextureMaterialByTextureFileID(Path.Combine(textureMetaPath, META_FILE_TEXTURE_MATERIAL_BY_TEXTURE_FILE_ID));
+            SaveTextureMaterialByTextureFilePath(Path.Combine(textureMetaPath, META_FILE_TEXTURE_MATERIAL_BY_TEXTURE_FILE_PATH));
 
             var groundEffectMetaPath = Path.Combine(AppSettings.Instance.MetaFolder, META_FOLDER_GROUND_EFFECT);
             if (!Directory.Exists(groundEffectMetaPath))
@@ -278,6 +334,23 @@ namespace ADTMeta.Steps
             }
 
             File.WriteAllText(path, JsonConvert.SerializeObject(textureInfoByFilePath.OrderBy(x => x.Key).ToDictionary(), Formatting.Indented));
+        }
+
+        private static void SaveTextureMaterialByTextureFileID(string path)
+        {
+            File.WriteAllText(path, JsonConvert.SerializeObject(_textureMaterialMap.OrderBy(x => x.Key).ToDictionary(x => x.Key.ToString(), x => x.Value), Formatting.Indented));
+        }
+
+        public static void SaveTextureMaterialByTextureFilePath(string path)
+        {
+            var textureMaterialByFilePath = new Dictionary<string, byte>();
+            foreach (var entry in _textureMaterialMap)
+            {
+                if (ListFile.NameMap.TryGetValue(entry.Key, out var filename))
+                    textureMaterialByFilePath[filename.Replace("_h.blp", ".blp").Replace("_s.blp", ".blp")] = entry.Value;
+            }
+
+            File.WriteAllText(path, JsonConvert.SerializeObject(textureMaterialByFilePath.OrderBy(x => x.Key).ToDictionary(), Formatting.Indented));
         }
 
         public static void SaveGroundEffecByTextureFileID(string path)
