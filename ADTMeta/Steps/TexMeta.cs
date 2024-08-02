@@ -27,7 +27,7 @@ namespace ADTMeta.Steps
             Console.WriteLine("[INFO] Generating texture meta");
             Load();
 
-            Parallel.ForEach(ListFile.NameMap.Where(l => l.Value.EndsWith("_tex0.adt")), entry =>
+            Parallel.ForEach(ListFile.NameMap.Where(l => l.Value == "world/maps/newracestartzone/newracestartzone_21_34_tex0.adt" && l.Value.EndsWith("_tex0.adt")), entry =>
             {
                 if (!CASC.Instance.FileExists(entry.Key))
                     return;
@@ -109,7 +109,7 @@ namespace ADTMeta.Steps
 
             foreach (var chunk in terrainTexture.Chunks)
             {
-                if (chunk.TerrainMaterials == null || chunk.TerrainMaterials.TerrainMaterialIds == null || terrainTexture.TextureHeightIds == null || terrainTexture.TextureHeightIds.Textures == null)
+                if (chunk.TerrainMaterials == null || chunk.TerrainMaterials.TerrainMaterialIds == null || terrainTexture.TextureDiffuseIds == null || terrainTexture.TextureDiffuseIds.Textures == null)
                     continue;
 
                 for (byte i = 0; i < chunk.TerrainMaterials.TerrainMaterialIds.Length; i++)
@@ -117,7 +117,7 @@ namespace ADTMeta.Steps
                     if (chunk.TerrainMaterials.TerrainMaterialIds[i] == 0)
                         continue;
 
-                    if (terrainTexture.TextureDiffuseIds.Textures[i] == 0)
+                    if (terrainTexture.TextureDiffuseIds.Textures.Count() < (i+1) || terrainTexture.TextureDiffuseIds.Textures[i] == 0)
                         continue;
 
                     if (_textureMaterialMap.TryGetValue((int)terrainTexture.TextureDiffuseIds.Textures[i], out var existingInfo))
@@ -155,6 +155,9 @@ namespace ADTMeta.Steps
                 foreach (var layer in chunk.TextureLayers.Layers)
                 {
                     if (layer.EffectID == 0)
+                        continue;
+
+                    if (terrainTexture.TextureDiffuseIds.Textures.Count() < ((int)layer.TextureID + 1))
                         continue;
 
                     var textureId = (int)terrainTexture.TextureDiffuseIds.Textures[(int)layer.TextureID];
