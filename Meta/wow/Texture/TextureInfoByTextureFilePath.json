@@ -1,84 +1,4 @@
 {
-  "tileset/2601/2601_40_31_5661538.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2601/2601_40_31_5661541.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2601/2601_40_31_5684322.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2601/2601_40_31_5706847.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2601/2601_41_31_5661544.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2706/2706_30_30_5789422.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2706/2706_30_30_5789428.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2706/2706_30_30_5793323.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2706/2706_31_30_5661146.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2706/2706_31_30_5661149.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2706/2706_31_30_5760447.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2706/2706_31_30_5882507.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2706/2706_31_31_5789419.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2706/2706_31_32_5761500.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2706/2706_31_32_5768787.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
-  "tileset/2769/2769_31_32_5661152.blp": {
-    "Scale": 1,
-    "HeightScale": 6.0,
-    "HeightOffset": 1.0
-  },
   "tileset/6.0/ashrand/data/6ar_grass01_512.blp": {
     "Scale": 1,
     "HeightScale": 6.0,
@@ -5897,6 +5817,86 @@
   "tileset/expansion10/11nr_spiderweb01_512.blp": {
     "Scale": 2,
     "HeightScale": 12.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_asphaltroad01_1024.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_brickroad01_512.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_brickroad02_512.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_dirt01_512.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_dirt02_512.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_dirt03_512.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_grass01_1024.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_grass02_1024.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_metalscrap01_1024.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_metalscrap02_1024.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_metalscrap03_1024.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_pebbles01_512.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_rock01_1024.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_rock02_1024.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_rock03_512.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_sand01_512.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
     "HeightOffset": 1.0
   },
   "tileset/kunlaisummit/data/kls_snow02_512.blp": {
