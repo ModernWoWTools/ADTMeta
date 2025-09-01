@@ -1,4 +1,7 @@
 {
+  "tileset/2810/2810_24_27_6374223.blp": [
+    200705
+  ],
   "tileset/7.0/general/data/7xp_maelstromrock01_512.blp": [
     163739
   ],
@@ -32,11 +35,15 @@
   ],
   "tileset/aerie peaks/aeriepeaksgrasshighlight.blp": [
     366,
-    126431
+    126431,
+    195261,
+    154296
   ],
   "tileset/aerie peaks/aeriepeaksgravelneedlesbase.blp": [
     1083,
-    367
+    367,
+    195262,
+    196029
   ],
   "tileset/aerie peaks/aeriepeaksrockbase.blp": [
     1737,
@@ -46,11 +53,18 @@
     6239,
     126428,
     141773,
-    152955
+    152955,
+    195258,
+    195294,
+    195279,
+    153862,
+    154304
   ],
   "tileset/aerie peaks/aeriepeaksrockroadbase.blp": [
     378,
-    126449
+    126449,
+    195266,
+    154295
   ],
   "tileset/aerie peaks/aeriepeaksrockymudbase.blp": [
     1766,
@@ -58,7 +72,9 @@
     374,
     396,
     126429,
-    141769
+    141769,
+    195263,
+    153861
   ],
   "tileset/aerie peaks/aeriepeaksscrubbrushbase.blp": [
     512,
@@ -84,14 +100,22 @@
     161716,
     184427,
     184445,
-    141325
+    141325,
+    195260,
+    195291,
+    153869,
+    154302
   ],
   "tileset/aerie peaks/aeriepeakswebs.blp": [
-    1794
+    1794,
+    195274,
+    196039
   ],
   "tileset/alteracmtns/alteraccropbase.blp": [
     2220,
-    4718
+    4718,
+    195289,
+    196040
   ],
   "tileset/alteracmtns/alteracdirtbase.blp": [
     93943,
@@ -128,7 +152,11 @@
     105159,
     140767,
     141757,
-    154953
+    154953,
+    195283,
+    195254,
+    154222,
+    154294
   ],
   "tileset/alteracmtns/alteracgrasshighlight02.blp": [
     2247,
@@ -145,7 +173,9 @@
     2239,
     5383,
     26818,
-    105161
+    105161,
+    195287,
+    154226
   ],
   "tileset/alteracmtns/alteracgrasshighlight03.blp": [
     2250,
@@ -167,7 +197,11 @@
     2238,
     28007,
     26815,
-    105160
+    105160,
+    195286,
+    195275,
+    154223,
+    154305
   ],
   "tileset/alteracmtns/alteracrockbase.blp": [
     354,
@@ -180,7 +214,11 @@
     36615,
     26817,
     141761,
-    144502
+    144502,
+    195284,
+    195256,
+    154243,
+    154293
   ],
   "tileset/alteracmtns/alteracrockhighlight.blp": [
     2617
@@ -190,11 +228,17 @@
     342,
     377,
     26816,
-    141772
+    141772,
+    195285,
+    195265,
+    154225,
+    196031
   ],
   "tileset/alteracmtns/alteracrubblebase.blp": [
     2187,
-    22774
+    22774,
+    195288,
+    154252
   ],
   "tileset/araithihighlands/arathihighlandscropbase.blp": [
     1836,
@@ -571,7 +615,8 @@
   ],
   "tileset/durotar/durotardirt.blp": [
     8249,
-    162047
+    162047,
+    196803
   ],
   "tileset/durotar/durotardirtsmooth.blp": [
     167236,
@@ -583,7 +628,8 @@
     99839,
     99831,
     161938,
-    162046
+    162046,
+    196802
   ],
   "tileset/durotar/durotarjungleleavesb.blp": [
     70287,
@@ -624,7 +670,9 @@
     88099,
     87957,
     178499,
-    141391
+    141391,
+    195296,
+    196045
   ],
   "tileset/duskwallow marsh/duskwallowrock.blp": [
     1079,
@@ -797,7 +845,8 @@
     184425,
     184440,
     141327,
-    161972
+    161972,
+    196758
   ],
   "tileset/elwynn/elwynngrassshadow.blp": [
     74201,
@@ -1976,7 +2025,8 @@
     78217,
     73599,
     163502,
-    163517
+    163517,
+    195318
   ],
   "tileset/expansion03/twilighthighlands/th_sand_01.blp": [
     78194,
@@ -2009,7 +2059,9 @@
     73603,
     154545,
     163509,
-    163510
+    163510,
+    195232,
+    195317
   ],
   "tileset/expansion03/uldum/ul_floor_tiles_01.blp": [
     169015,
@@ -3053,7 +3105,8 @@
     106200,
     109872,
     109885,
-    154012
+    154012,
+    160658
   ],
   "tileset/expansion05/ashrand/6ar_dirt05_512.blp": [
     143830
@@ -3072,7 +3125,9 @@
   "tileset/expansion05/ashrand/6ar_grass01_512_dead.blp": [
     102238,
     109897,
-    154017
+    154017,
+    193825,
+    195213
   ],
   "tileset/expansion05/ashrand/6ar_grass01_512.blp": [
     98514,
@@ -3153,12 +3208,14 @@
     114045,
     109508,
     109887,
-    154013
+    154013,
+    160657
   ],
   "tileset/expansion05/ashrand/6ar_rock03_512.blp": [
     98399,
     109902,
-    154022
+    154022,
+    195215
   ],
   "tileset/expansion05/ashrand/6ar_spawningpool01_256.blp": [
     108852
@@ -3330,7 +3387,8 @@
     161704,
     184462,
     154450,
-    162018
+    162018,
+    196768
   ],
   "tileset/expansion05/nagrand/6ng_grass01_512.blp": [
     101855,
@@ -3613,7 +3671,8 @@
     152946,
     147428,
     191774,
-    191905
+    191905,
+    195276
   ],
   "tileset/expansion05/spiresofarrak/6sa_dirt02_256.blp": [
     148769
@@ -3646,7 +3705,8 @@
     100591,
     102961,
     102954,
-    103271
+    103271,
+    160663
   ],
   "tileset/expansion05/spiresofarrak/6sa_grass02_512.blp": [
     107282,
@@ -3955,7 +4015,8 @@
     161705,
     184463,
     154061,
-    162019
+    162019,
+    196750
   ],
   "tileset/expansion05/talador/6td_webdirt02_512.blp": [
     99115,
@@ -4056,6 +4117,9 @@
     115867,
     114598,
     143971
+  ],
+  "tileset/expansion05/tanaanjungle/6tj_mud_02_512.blp": [
+    134917
   ],
   "tileset/expansion05/tanaanjungle/6tj_reddirtfloor_1024.blp": [
     106788,
@@ -4818,7 +4882,9 @@
     138545,
     148915,
     150531,
-    148733
+    148733,
+    143008,
+    147773
   ],
   "tileset/expansion06/azsuna/7az_dirt_01.blp": [
     149683
@@ -5311,7 +5377,9 @@
     122240,
     126370,
     123131,
-    136082
+    136082,
+    198432,
+    193757
   ],
   "tileset/expansion06/suramar/7sr_tile01_512.blp": [
     129895,
@@ -5654,7 +5722,8 @@
     181494,
     158017,
     191075,
-    190523
+    190523,
+    197198
   ],
   "tileset/expansion07/8naj_sand02_512.blp": [
     177978,
@@ -5699,7 +5768,8 @@
     149295,
     143952,
     144397,
-    152882
+    152882,
+    150712
   ],
   "tileset/expansion07/barbarianzone/8dru_grass01_1024.blp": [
     148970,
@@ -5721,7 +5791,8 @@
     189623,
     152424,
     160917,
-    193052
+    193052,
+    153217
   ],
   "tileset/expansion07/barbarianzone/8dru_redmulch01_512.blp": [
     149163,
@@ -5805,11 +5876,14 @@
     151772
   ],
   "tileset/expansion07/desertzone/8des_rubble_256.blp": [
-    146870
+    146870,
+    195666
   ],
   "tileset/expansion07/desertzone/8des_saltflat01_512.blp": [
     135257,
-    151781
+    151781,
+    200870,
+    193823
   ],
   "tileset/expansion07/desertzone/8des_saltflat02_512.blp": [
     135341
@@ -5898,19 +5972,22 @@
     153315,
     153386,
     191861,
-    191982
+    191982,
+    195282
   ],
   "tileset/expansion07/general/8war_grass03_1024.blp": [
     153440,
     153310,
     153385,
     191838,
-    191907
+    191907,
+    195281
   ],
   "tileset/expansion07/general/8war_pebble01_256.blp": [
     152953,
     191768,
-    191928
+    191928,
+    195278
   ],
   "tileset/expansion07/general/8war_stoneroad01_512.blp": [
     191885
@@ -5926,7 +6003,8 @@
   ],
   "tileset/expansion07/kultiraszone/8kul_clover01_256.blp": [
     140910,
-    136196
+    136196,
+    147752
   ],
   "tileset/expansion07/kultiraszone/8kul_cobble_512.blp": [
     175526,
@@ -5947,7 +6025,8 @@
     155734,
     145468,
     136177,
-    193051
+    193051,
+    147750
   ],
   "tileset/expansion07/kultiraszone/8kul_dirt02_1024.blp": [
     175541,
@@ -5959,7 +6038,8 @@
     157243,
     154155,
     153632,
-    152422
+    152422,
+    153216
   ],
   "tileset/expansion07/kultiraszone/8kul_drygrass01_1024.blp": [
     150755,
@@ -5988,7 +6068,9 @@
     147231,
     154156,
     152423,
-    159006
+    159006,
+    147749,
+    193836
   ],
   "tileset/expansion07/kultiraszone/8kul_grass01_512.blp": [
     139962,
@@ -6022,11 +6104,13 @@
     145482,
     191722,
     144056,
-    159005
+    159005,
+    147760
   ],
   "tileset/expansion07/kultiraszone/8kul_lichen02_512.blp": [
     137838,
-    144065
+    144065,
+    147772
   ],
   "tileset/expansion07/kultiraszone/8kul_moss01_256.blp": [
     175505,
@@ -6043,7 +6127,8 @@
     144046,
     158918,
     190636,
-    158980
+    158980,
+    147762
   ],
   "tileset/expansion07/kultiraszone/8kul_mossyrock01_1024.blp": [
     146538,
@@ -6065,7 +6150,8 @@
     136191,
     153616,
     154282,
-    144041
+    144041,
+    147748
   ],
   "tileset/expansion07/kultiraszone/8kul_rock02_512.blp": [
     175501,
@@ -6087,7 +6173,8 @@
     153614,
     144048,
     159380,
-    185266
+    185266,
+    193680
   ],
   "tileset/expansion07/kultiraszone/8kul_rubble01_512.blp": [
     175500,
@@ -6107,7 +6194,9 @@
     150248,
     144051,
     158989,
-    158924
+    158924,
+    192291,
+    147751
   ],
   "tileset/expansion07/kultiraszone/8kul_rubble02_512.blp": [
     175542,
@@ -6119,7 +6208,8 @@
     189043,
     159235,
     159357,
-    161239
+    161239,
+    194054
   ],
   "tileset/expansion07/kultiraszone/8kul_snow01_512.blp": [
     175517,
@@ -6570,6 +6660,9 @@
     170295,
     163435
   ],
+  "tileset/expansion08/9bas_rock01_512.blp": [
+    195689
+  ],
   "tileset/expansion08/9bas_rock03_512.blp": [
     163433
   ],
@@ -6906,7 +6999,8 @@
   ],
   "tileset/expansion09/10can_rock03_512.blp": [
     178828,
-    184253
+    184253,
+    197928
   ],
   "tileset/expansion09/10can_sand01_512.blp": [
     178072,
@@ -7042,7 +7136,8 @@
     181489,
     186827,
     183673,
-    184836
+    184836,
+    197919
   ],
   "tileset/expansion09/10gsl_grass03_512.blp": [
     177958,
@@ -7053,7 +7148,8 @@
     181678,
     178053,
     182619,
-    183616
+    183616,
+    197921
   ],
   "tileset/expansion09/10hgl_arcanegrass01_512.blp": [
     181446,
@@ -7362,7 +7458,8 @@
     188434
   ],
   "tileset/expansion10/11ar_crystal_green01_copy_1024.blp": [
-    190955
+    190955,
+    190954
   ],
   "tileset/expansion10/11ar_crystal_purple01_1024.blp": [
     192787
@@ -7386,14 +7483,16 @@
   "tileset/expansion10/11ar_dirt01_512.blp": [
     193357,
     187832,
-    191629
+    191629,
+    197208
   ],
   "tileset/expansion10/11ar_dirt02_512.blp": [
     193350,
     187826,
     187348,
     190507,
-    191623
+    191623,
+    197201
   ],
   "tileset/expansion10/11ar_farmland01_512.blp": [
     187901,
@@ -7417,33 +7516,38 @@
     193353,
     187831,
     190527,
-    187351
+    187351,
+    197206
   ],
   "tileset/expansion10/11ar_grass02_512.blp": [
     193351,
     187825,
     187350,
     191624,
-    190508
+    190508,
+    197200
   ],
   "tileset/expansion10/11ar_grass03_512.blp": [
     187767,
     186880,
     188592,
     190823,
-    188588
+    188588,
+    195620
   ],
   "tileset/expansion10/11ar_grass04_512.blp": [
     193355,
     187828,
     190740,
-    187349
+    187349,
+    197226
   ],
   "tileset/expansion10/11ar_grass05_512.blp": [
     190450,
     190440,
     188941,
-    192781
+    192781,
+    199149
   ],
   "tileset/expansion10/11ar_grass06_512.blp": [
     190298,
@@ -7454,12 +7558,15 @@
   ],
   "tileset/expansion10/11ar_grass07_512.blp": [
     190042,
-    190041
+    190041,
+    198026,
+    193930
   ],
   "tileset/expansion10/11ar_grass08_512.blp": [
     193356,
     190928,
-    191622
+    191622,
+    197207
   ],
   "tileset/expansion10/11ar_hexroad01_512.blp": [
     189820,
@@ -7503,7 +7610,8 @@
     190666,
     191189,
     191200,
-    192332
+    192332,
+    199150
   ],
   "tileset/expansion10/11ar_rock05_512.blp": [
     190434,
@@ -7533,7 +7641,10 @@
     191184,
     190755,
     190753,
-    192326
+    192326,
+    199147,
+    199643,
+    196226
   ],
   "tileset/expansion10/11ar_rockcrystal_green01_2048.blp": [
     192206
@@ -7557,7 +7668,8 @@
   "tileset/expansion10/11ar_sand02_512.blp": [
     193352,
     187829,
-    191631
+    191631,
+    197199
   ],
   "tileset/expansion10/11ar_sand03_512.blp": [
     190610,
@@ -7565,7 +7677,8 @@
     189034,
     186848,
     188764,
-    191604
+    191604,
+    193288
   ],
   "tileset/expansion10/11ar_sand05_1024.blp": [
     191099,
@@ -7577,34 +7690,49 @@
     190900,
     192054,
     189983,
-    191196
+    191196,
+    195608
   ],
   "tileset/expansion10/11ar_stones01_512.blp": [
     188372,
     190821
   ],
+  "tileset/expansion10/11ar_stones02_512.blp": [
+    193354,
+    191045,
+    197212,
+    191630,
+    197229
+  ],
   "tileset/expansion10/11ea_coral01_512.blp": [
-    188496
+    188496,
+    197190
   ],
   "tileset/expansion10/11ea_dirt01_512.blp": [
-    187136
+    187136,
+    198024,
+    193927
   ],
   "tileset/expansion10/11ea_dirt02_512.blp": [
-    187732
+    187732,
+    198020
   ],
   "tileset/expansion10/11ea_dirt03_512.blp": [
     188455
   ],
   "tileset/expansion10/11ea_grass01_1024.blp": [
     188439,
-    188447
+    188447,
+    198023,
+    197187
   ],
   "tileset/expansion10/11ea_grass02_1024.blp": [
     187137
   ],
   "tileset/expansion10/11ea_grass03_512.blp": [
     188442,
-    190356
+    190356,
+    198019
   ],
   "tileset/expansion10/11ea_mossyrock01_1024.blp": [
     188490
@@ -7640,24 +7768,30 @@
   ],
   "tileset/expansion10/11ea_rock01_1024.blp": [
     194659,
-    187129
+    187129,
+    187669
   ],
   "tileset/expansion10/11ea_rock02_1024.blp": [
     188512,
-    192782
+    192782,
+    188452
   ],
   "tileset/expansion10/11ea_rock03_512.blp": [
-    187352
+    187352,
+    188680
   ],
   "tileset/expansion10/11ea_roots01_1024.blp": [
     187138
   ],
   "tileset/expansion10/11ea_sand01_512.blp": [
-    187585
+    187585,
+    193935
   ],
   "tileset/expansion10/11ea_sand02_512.blp": [
     194810,
-    188494
+    188494,
+    197186,
+    190573
   ],
   "tileset/expansion10/11ea_stoneroad01_512.blp": [
     188641
@@ -7665,19 +7799,96 @@
   "tileset/expansion10/11ea_stones_dark01_256.blp": [
     192391
   ],
+  "tileset/expansion10/11krs_bluesand01_1024.blp": [
+    199143,
+    194274
+  ],
+  "tileset/expansion10/11krs_crystalglass01_2048.blp": [
+    194041
+  ],
+  "tileset/expansion10/11krs_crystalrock01_1024.blp": [
+    199141,
+    197155
+  ],
+  "tileset/expansion10/11krs_dirt01_512.blp": [
+    199138,
+    194042
+  ],
+  "tileset/expansion10/11krs_grass01_1024.blp": [
+    198431,
+    193882
+  ],
+  "tileset/expansion10/11krs_grass02_1024.blp": [
+    199648,
+    199122
+  ],
+  "tileset/expansion10/11krs_pebbles01_1024.blp": [
+    196285
+  ],
+  "tileset/expansion10/11krs_purplesand01_1024.blp": [
+    199142,
+    200969,
+    194275
+  ],
+  "tileset/expansion10/11krs_rock01_1024.blp": [
+    199133,
+    199642,
+    193564
+  ],
+  "tileset/expansion10/11krs_rock02_1024.blp": [
+    199134,
+    198455,
+    193566
+  ],
+  "tileset/expansion10/11krs_rubble01_512.blp": [
+    199780,
+    199145,
+    199109,
+    196284,
+    198189,
+    196291,
+    199117,
+    198561,
+    199697,
+    198568
+  ],
+  "tileset/expansion10/11krs_sand01_512.blp": [
+    199137,
+    199645,
+    193567
+  ],
+  "tileset/expansion10/11krs_sand02_512.blp": [
+    199136,
+    198127,
+    193568
+  ],
+  "tileset/expansion10/11krs_sand03_1024.blp": [
+    199135,
+    199644,
+    193569
+  ],
+  "tileset/expansion10/11krs_stones01_512.blp": [
+    199139,
+    199646,
+    195509
+  ],
   "tileset/expansion10/11nr_dirt01_512.blp": [
     190435,
     192139,
     192778,
     191171,
-    192342
+    192342,
+    199148,
+    200728
   ],
   "tileset/expansion10/11nr_membrane01_1024.blp": [
     191021,
     189756,
     193182,
     190676,
-    192799
+    192799,
+    197045,
+    192259
   ],
   "tileset/expansion10/11nr_moss01_1024.blp": [
     188616,
@@ -7687,7 +7898,8 @@
     189530,
     190606,
     190677,
-    192802
+    192802,
+    193958
   ],
   "tileset/expansion10/11nr_moss02_512.blp": [
     190482,
@@ -7702,7 +7914,8 @@
     192659,
     191405,
     191002,
-    192444
+    192444,
+    193294
   ],
   "tileset/expansion10/11nr_pebbles01_1024.blp": [
     188768,
@@ -7773,14 +7986,16 @@
     187776,
     186847,
     187640,
-    187774
+    187774,
+    193286
   ],
   "tileset/expansion10/11nr_rot02_512.blp": [
     190607,
     187777,
     187627,
     188854,
-    188428
+    188428,
+    193296
   ],
   "tileset/expansion10/11nr_rot03_1024.blp": [
     187771,
@@ -7797,7 +8012,8 @@
     193331,
     193363,
     192821,
-    188879
+    188879,
+    200732
   ],
   "tileset/expansion10/11nr_sand02_1024.blp": [
     188617,
@@ -7817,6 +8033,75 @@
     193013,
     192851,
     194148
+  ],
+  "tileset/expansion10/11udm_asphaltroad01_1024.blp": [
+    195552,
+    193709,
+    194255
+  ],
+  "tileset/expansion10/11udm_brickroad01_512.blp": [
+    194052
+  ],
+  "tileset/expansion10/11udm_brickroad02_512.blp": [
+    193856
+  ],
+  "tileset/expansion10/11udm_dirt01_512.blp": [
+    199169,
+    193712,
+    196708
+  ],
+  "tileset/expansion10/11udm_dirt02_512.blp": [
+    195512,
+    193669,
+    193777
+  ],
+  "tileset/expansion10/11udm_dirt03_512.blp": [
+    195547,
+    193867,
+    194258
+  ],
+  "tileset/expansion10/11udm_grass01_1024.blp": [
+    195534,
+    193702
+  ],
+  "tileset/expansion10/11udm_grass02_1024.blp": [
+    199233,
+    193755
+  ],
+  "tileset/expansion10/11udm_metalscrap01_1024.blp": [
+    193668
+  ],
+  "tileset/expansion10/11udm_metalscrap02_1024.blp": [
+    199191,
+    193866
+  ],
+  "tileset/expansion10/11udm_metalscrap03_1024.blp": [
+    199183,
+    199153,
+    193711,
+    196710
+  ],
+  "tileset/expansion10/11udm_pebbles01_512.blp": [
+    195528,
+    193670,
+    193771
+  ],
+  "tileset/expansion10/11udm_rock01_1024.blp": [
+    199170,
+    193713
+  ],
+  "tileset/expansion10/11udm_rock02_1024.blp": [
+    195538,
+    193673
+  ],
+  "tileset/expansion10/11udm_rock03_512.blp": [
+    195522,
+    193706
+  ],
+  "tileset/expansion10/11udm_sand01_512.blp": [
+    196105,
+    194190,
+    194257
   ],
   "tileset/felwood/felwooddirt.blp": [
     2643,
@@ -8654,21 +8939,24 @@
     161702,
     184456,
     128906,
-    162013
+    162013,
+    196767
   ],
   "tileset/stormwindcity/swc_grassmida.blp": [
     69264,
     161703,
     184446,
     128907,
-    162007
+    162007,
+    196741
   ],
   "tileset/stormwindcity/swc_grasspattern.blp": [
     19653,
     161701,
     184455,
     128905,
-    162012
+    162012,
+    196766
   ],
   "tileset/stranglethorn/stranglethorncobblestoneroad.blp": [
     593,
@@ -9009,6 +9297,12 @@
   "tileset/tol barad/tolbaraddirt.blp": [
     96988
   ],
+  "tileset/unused/2388183_512.blp": [
+    160659
+  ],
+  "tileset/unused/2388189_512.blp": [
+    160662
+  ],
   "tileset/unused/3039604_512.blp": [
     192824
   ],
@@ -9121,7 +9415,8 @@
     1059,
     82014,
     97139,
-    154514
+    154514,
+    195230
   ],
   "tileset/wetlands/wetlandsdirt01.blp": [
     2229,
@@ -9139,7 +9434,8 @@
     154816,
     155064,
     185877,
-    154509
+    154509,
+    195228
   ],
   "tileset/wetlands/wetlandsdirtmoss01.blp": [
     408,
@@ -9160,7 +9456,9 @@
     184433,
     128826,
     154511,
-    161979
+    161979,
+    195229,
+    196765
   ],
   "tileset/wetlands/wetlandsgrassdark01.blp": [
     407,
@@ -9173,7 +9471,8 @@
     1966,
     10144,
     97144,
-    156859
+    156859,
+    195233
   ],
   "tileset/wetlands/wetlandsgrassdark02.blp": [
     399,
@@ -9197,11 +9496,14 @@
     184424,
     154524,
     163497,
-    163506
+    163506,
+    195313,
+    195231
   ],
   "tileset/wetlands/wetlandsroad01.blp": [
     404,
-    191680
+    191680,
+    195237
   ],
   "tileset/winterspring grove/winterspringfootprints.blp": [
     4444

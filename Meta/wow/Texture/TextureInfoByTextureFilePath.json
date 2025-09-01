@@ -1,4 +1,9 @@
 {
+  "tileset/2810/2810_24_27_6374222.blp": {
+    "Scale": 4,
+    "HeightScale": 10.0,
+    "HeightOffset": 1.0
+  },
   "tileset/6.0/ashrand/data/6ar_grass01_512.blp": {
     "Scale": 1,
     "HeightScale": 6.0,
@@ -5729,6 +5734,81 @@
     "HeightScale": 1.0,
     "HeightOffset": 1.0
   },
+  "tileset/expansion10/11krs_bluesand01_1024.blp": {
+    "Scale": 3,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_crystalglass01_2048.blp": {
+    "Scale": 4,
+    "HeightScale": 10.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_crystalrock01_1024.blp": {
+    "Scale": 2,
+    "HeightScale": 16.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_dirt01_512.blp": {
+    "Scale": 1,
+    "HeightScale": 8.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_grass01_1024.blp": {
+    "Scale": 2,
+    "HeightScale": 5.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_grass02_1024.blp": {
+    "Scale": 2,
+    "HeightScale": 5.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_pebbles01_1024.blp": {
+    "Scale": 2,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_purplesand01_1024.blp": {
+    "Scale": 3,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_rock01_1024.blp": {
+    "Scale": 3,
+    "HeightScale": 10.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_rock02_1024.blp": {
+    "Scale": 3,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_rubble01_512.blp": {
+    "Scale": 1,
+    "HeightScale": 8.0,
+    "HeightOffset": 0.1
+  },
+  "tileset/expansion10/11krs_sand01_512.blp": {
+    "Scale": 2,
+    "HeightScale": 4.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_sand02_512.blp": {
+    "Scale": 2,
+    "HeightScale": 5.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_sand03_1024.blp": {
+    "Scale": 3,
+    "HeightScale": 5.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11krs_stones01_512.blp": {
+    "Scale": 1,
+    "HeightScale": 14.0,
+    "HeightOffset": 1.0
+  },
   "tileset/expansion10/11nr_dirt01_512.blp": {
     "Scale": 1,
     "HeightScale": 5.0,
@@ -5829,9 +5909,29 @@
     "HeightScale": 6.0,
     "HeightOffset": 1.0
   },
+  "tileset/expansion10/11udm_brickroad01_early_512.blp": {
+    "Scale": 1,
+    "HeightScale": 16.0,
+    "HeightOffset": 1.0
+  },
   "tileset/expansion10/11udm_brickroad02_512.blp": {
     "Scale": 1,
     "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_brickroad02_early_512.blp": {
+    "Scale": 1,
+    "HeightScale": 16.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_brickroad03_512.blp": {
+    "Scale": 1,
+    "HeightScale": 16.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/expansion10/11udm_brickroad03_early_512.blp": {
+    "Scale": 1,
+    "HeightScale": 16.0,
     "HeightOffset": 1.0
   },
   "tileset/expansion10/11udm_dirt01_512.blp": {
@@ -5943,6 +6043,11 @@
     "Scale": 0,
     "HeightScale": 5.36,
     "HeightOffset": 0.1
+  },
+  "tileset/unused/11krs_purplesand02_1024.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
   },
   "tileset/unused/1501502_1024.blp": {
     "Scale": 1,
