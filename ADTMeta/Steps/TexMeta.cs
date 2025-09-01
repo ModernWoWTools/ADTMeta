@@ -27,7 +27,7 @@ namespace ADTMeta.Steps
             Console.WriteLine("[INFO] Generating texture meta");
             Load();
 
-            Parallel.ForEach(ListFile.NameMap.Where(l => l.Value == "world/maps/newracestartzone/newracestartzone_21_34_tex0.adt" && l.Value.EndsWith("_tex0.adt")), entry =>
+            Parallel.ForEach(ListFile.NameMap.Where(l => l.Value.EndsWith("_tex0.adt")), entry =>
             {
                 if (!CASC.Instance.FileExists(entry.Key))
                     return;
