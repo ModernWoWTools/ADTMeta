@@ -1,5 +1,7 @@
-name: Generate Meta files
+name: Generate Meta files V2
 on:
+  schedule:
+    - cron: "0 22 * * *"
   workflow_dispatch:
 
 jobs:
