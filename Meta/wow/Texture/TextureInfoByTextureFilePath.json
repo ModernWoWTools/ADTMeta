@@ -1,4 +1,9 @@
 {
+  "tileset/2783/2783_32_32_7466666.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
   "tileset/2810/2810_24_27_6374222.blp": {
     "Scale": 4,
     "HeightScale": 10.0,
