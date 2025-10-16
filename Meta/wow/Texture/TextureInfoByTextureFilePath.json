@@ -4,6 +4,16 @@
     "HeightScale": 6.0,
     "HeightOffset": 1.0
   },
+  "tileset/2805/2805_39_20_6161719.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
+  "tileset/2805/2805_39_20_6706413.blp": {
+    "Scale": 1,
+    "HeightScale": 6.0,
+    "HeightOffset": 1.0
+  },
   "tileset/2810/2810_24_27_6374222.blp": {
     "Scale": 4,
     "HeightScale": 10.0,
